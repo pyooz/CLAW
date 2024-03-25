@@ -1,6 +1,6 @@
 import './App.css';
 
-export default function main() {
+export default function claw() {
   return (
     <div className="main">
       <div className="home">
