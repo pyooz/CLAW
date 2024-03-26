@@ -1,5 +1,6 @@
 // Header.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -9,15 +10,13 @@ export default function Header() {
       </div>
       <div className="header-menu">
         <div className="menu">
-          <span className="main-2">공유</span>
-          <span className="main-3">쿠폰</span>
-          <span className="main-4">행사</span>
-          <span className="main-5">시간표</span>
+          <Link to="/share" className="main-2">공유</Link>
+          <Link to="/coupon" className="main-3">쿠폰</Link>
+          <Link to="/event" className="main-4">행사</Link>
+          <Link to="/schedule" className="main-5">시간표</Link>
         </div>
         <div className="login-group">
-          <div className="login">
-            <span className="main-6">로그인</span>
-          </div>
+          <Link to="/login" className="login main-6">로그인</Link>
         </div>
       </div>
     </div>
