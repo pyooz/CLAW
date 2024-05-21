@@ -47,17 +47,17 @@ const LearningPage = () => {
     completeStudy,
   } = useLearning();
 
-  // 토글 상태를 추가합니다. true일 경우 자음, false일 경우 모음을 나타냅니다.
+  // 토글 상태를 추가합니다. true일 경우 자음, false일 경우 모음을 나타냄
   const [isConsonant, setIsConsonant] = useState(true);
 
-  // 토글 상태를 변경하는 함수입니다.
+  // 토글 상태를 변경하는 함수
   const toggleLetterType = () => {
     setIsConsonant(!isConsonant);
   };
 
   return (
     <div>
-      <h2>한글 깨우치기 - 학습 페이지</h2>
+      <h2>한글 깨우치기 - 학습하기</h2>
       <button onClick={toggleLetterType}>
         {isConsonant ? '모음 학습하기' : '자음 학습하기'}
       </button>
