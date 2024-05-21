@@ -38,7 +38,7 @@ const vowels = [
 ];
 
 const doubleCons = [
-  { id: 1, letter: 'ㄲ', sound: 'ㄲ' },
+  { id: 1, letter: 'ㄲ', sound: '쌍기역' },
   { id: 2, letter: 'ㄸ', sound: 'ㄸ' },
   { id: 3, letter: 'ㅃ', sound: 'ㅃ' },
   { id: 4, letter: 'ㅆ', sound: 'ㅆ' },
@@ -46,17 +46,17 @@ const doubleCons = [
 ];
 
 const doubleVow = [
-  { id: 1, letter: "ㅐ", sound: "ae" },
-  { id: 2, letter: "ㅒ", sound: "yae" },
-  { id: 3, letter: "ㅔ", sound: "e" },
-  { id: 4, letter: "ㅖ", sound: "ye" },
-  { id: 5, letter: "ㅘ", sound: "wa" },
-  { id: 6, letter: "ㅙ", sound: "wae" },
-  { id: 7, letter: "ㅚ", sound: "oe" },
-  { id: 8, letter: "ㅝ", sound: "wo" },
-  { id: 9, letter: "ㅞ", sound: "we" },
-  { id: 10, letter: "ㅟ", sound: "wi" },
-  { id: 11, letter: "ㅢ", sound: "ui" }
+  { id: 1, letter: "ㅐ", sound: "애" },
+  { id: 2, letter: "ㅒ", sound: "얘" },
+  { id: 3, letter: "ㅔ", sound: "에" },
+  { id: 4, letter: "ㅖ", sound: "예" },
+  { id: 5, letter: "ㅘ", sound: "와" },
+  { id: 6, letter: "ㅙ", sound: "왜" },
+  { id: 7, letter: "ㅚ", sound: "외" },
+  { id: 8, letter: "ㅝ", sound: "워" },
+  { id: 9, letter: "ㅞ", sound: "웨" },
+  { id: 10, letter: "ㅟ", sound: "위" },
+  { id: 11, letter: "ㅢ", sound: "의" }
 ];
 
 const LearningPage = () => {
