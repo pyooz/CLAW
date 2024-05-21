@@ -1,7 +1,9 @@
 // Mypage.js
 
+/*
+
 import React, { useState } from 'react';
-import Study from './Study';
+import LearningPage from './LearningPage';
 
 function Mypage() {
   // 사용자의 학습 진행 상황을 추적하는 상태 변수
@@ -20,9 +22,11 @@ function Mypage() {
       <h2>마이페이지</h2>
       <p>진행 상황: {progress}</p>
       <p>보상 포인트: {rewards}</p>
-      <Study />
+      <LearningPage />
     </div>
   );
 }
 
 export default Mypage;
+
+*/

@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./page/Home";
-import Study from "./page/Study";
 import Mypage from "./page/Mypage";
+import LearningPage from "./page/LearningPage";
+import ConsonantList from "./page/ConsonantList";
+import ConsonantButton from "./page/ConsonantButton";
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/study" element={<Study />} />
+          <Route path="/learningpage" element={<LearningPage />} />
           <Route path="/mypage" element={<Mypage />} />
         </Routes>
       </BrowserRouter>
