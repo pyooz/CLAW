@@ -1,4 +1,5 @@
 // LearningPage.js
+
 import React, { useState } from 'react';
 import useLearning from './useLearning';
 import ConsonantList from './ConsonantList';
@@ -36,6 +37,28 @@ const vowels = [
   { id: 10, letter: 'ㅣ', sound: 'ㅣ' },
 ];
 
+const doubleCons = [
+  { id: 1, letter: 'ㄲ', sound: 'ㄲ' },
+  { id: 2, letter: 'ㄸ', sound: 'ㄸ' },
+  { id: 3, letter: 'ㅃ', sound: 'ㅃ' },
+  { id: 4, letter: 'ㅆ', sound: 'ㅆ' },
+  { id: 5, letter: 'ㅉ', sound: 'ㅉ' },
+];
+
+const doubleVow = [
+  { id: 1, letter: "ㅐ", sound: "ae" },
+  { id: 2, letter: "ㅒ", sound: "yae" },
+  { id: 3, letter: "ㅔ", sound: "e" },
+  { id: 4, letter: "ㅖ", sound: "ye" },
+  { id: 5, letter: "ㅘ", sound: "wa" },
+  { id: 6, letter: "ㅙ", sound: "wae" },
+  { id: 7, letter: "ㅚ", sound: "oe" },
+  { id: 8, letter: "ㅝ", sound: "wo" },
+  { id: 9, letter: "ㅞ", sound: "we" },
+  { id: 10, letter: "ㅟ", sound: "wi" },
+  { id: 11, letter: "ㅢ", sound: "ui" }
+];
+
 const LearningPage = () => {
   const {
     selectedLetter,
@@ -47,26 +70,53 @@ const LearningPage = () => {
     completeStudy,
   } = useLearning();
 
-  // 토글 상태를 추가합니다. true일 경우 자음, false일 경우 모음을 나타냄
-  const [isConsonant, setIsConsonant] = useState(true);
+  const [letterType, setLetterType] = useState('consonant'); // 'consonant', 'vowel', 'doubleConsonant', 'doubleVowel'
 
-  // 토글 상태를 변경하는 함수
-  const toggleLetterType = () => {
-    setIsConsonant(!isConsonant);
+  const toggleLetterType = (type) => {
+    setLetterType(type);
   };
 
   return (
     <div>
       <h2>한글 깨우치기 - 학습하기</h2>
-      <button onClick={toggleLetterType}>
-        {isConsonant ? '모음 학습하기' : '자음 학습하기'}
-      </button>
       <div>
-        <h3>{isConsonant ? '자음 학습하기' : '모음 학습하기'}</h3>
-        {isConsonant ? (
-          <ConsonantList consonants={consonants} onLetterSelect={handleLetterSelection} />
-        ) : (
-          <VowelList vowels={vowels} onLetterSelect={handleLetterSelection} />
+        <button onClick={() => toggleLetterType('consonant')}>
+          자음 학습하기
+        </button>
+        <button onClick={() => toggleLetterType('vowel')}>
+          모음 학습하기
+        </button>
+        <button onClick={() => toggleLetterType('doubleConsonant')}>
+          쌍자음 학습하기
+        </button>
+        <button onClick={() => toggleLetterType('doubleVowel')}>
+          쌍모음 학습하기
+        </button>
+      </div>
+      <div>
+        {letterType === 'consonant' && (
+          <>
+            <h3>자음 학습하기</h3>
+            <ConsonantList consonants={consonants} onLetterSelect={handleLetterSelection} />
+          </>
+        )}
+        {letterType === 'vowel' && (
+          <>
+            <h3>모음 학습하기</h3>
+            <VowelList vowels={vowels} onLetterSelect={handleLetterSelection} />
+          </>
+        )}
+        {letterType === 'doubleConsonant' && (
+          <>
+            <h3>쌍자음 학습하기</h3>
+            <ConsonantList consonants={doubleCons} onLetterSelect={handleLetterSelection} />
+          </>
+        )}
+        {letterType === 'doubleVowel' && (
+          <>
+            <h3>쌍모음 학습하기</h3>
+            <VowelList vowels={doubleVow} onLetterSelect={handleLetterSelection} />
+          </>
         )}
         {selectedLetter && (
           <div>

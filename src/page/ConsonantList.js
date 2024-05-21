@@ -5,7 +5,9 @@ const ConsonantList = ({ consonants, onLetterSelect }) => {
   return (
     <div className="Consonant">
       {consonants.map((item) => (
-        <ConsonantButton key={item.id} item={item} onLetterSelect={onLetterSelect} />
+        <ConsonantButton key={item.id}
+          item={item}
+          onLetterSelect={onLetterSelect} />
       ))}
     </div>
   );
