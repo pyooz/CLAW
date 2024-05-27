@@ -1,0 +1,68 @@
+/* LearningPage.css */
+
+/* 기본 바디
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+} */
+
+.pageContainer {
+  margin: 5% 5% 5% 5%;
+}
+
+/* 컨테이너 스타일
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  color: #555;
+  margin-top: 20px;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* 버튼 스타일 */
+.button-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.selectedLetter {
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+#studyCanvas {
+  display: block;
+  width: 100%;
+  height: 400px;
+}

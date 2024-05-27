@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import useLearning from './useLearning';
 import ConsonantList from './ConsonantList';
 import VowelList from './VowelList';
+import styles from './LearningPage.module.css';
+import Canvas from './Canvas';
 
 const consonants = [
   // 자음 목록
@@ -62,12 +64,12 @@ const doubleVow = [
 const LearningPage = () => {
   const {
     selectedLetter,
-    progress,
-    rewards,
-    studyImage,
-    isStudyComplete,
     handleLetterSelection,
-    completeStudy,
+    // progress,
+    // rewards,
+    // studyImage,
+    // isStudyComplete,
+    // completeStudy,
   } = useLearning();
 
   const [letterType, setLetterType] = useState('consonant'); // 'consonant', 'vowel', 'doubleConsonant', 'doubleVowel'
@@ -77,7 +79,7 @@ const LearningPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <h2>한글 깨우치기 - 학습하기</h2>
       <div>
         <button onClick={() => toggleLetterType('consonant')}>
@@ -120,11 +122,12 @@ const LearningPage = () => {
         )}
         {selectedLetter && (
           <div>
-            <p>선택한 글자: {selectedLetter}</p>
+            <p>선택한 글자:</p>
+            <p className={styles.selectedLetter}> {selectedLetter}</p>
           </div>
         )}
       </div>
-      <canvas id="studyCanvas" style={{ display: 'none' }}></canvas>
+      <Canvas />
     </div>
   );
 };
