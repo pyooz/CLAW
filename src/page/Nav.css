@@ -4,21 +4,28 @@
 /* https://github.com/orioncactus/pretendard */
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 수직 중앙 정렬 */
   width: 100%;
   background-color: #a0cbe7;
-  padding: 2% 0px;
-  text-align: center;
+  padding: 2% 0;
+  position: relative;
+  box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
-  text-align: left;
+  position: absolute;
+  left: 10%;
+  top: 50%; /* 수직 중앙 정렬 */
+  transform: translateY(-50%); /* 수직 중앙 정렬 */
+  width: 60px;
+  height: 60px;
 }
 
 .navbarMenu {
   color: white;
-  margin: 8px;
+  margin: 0 8px; /* 좌우 여백 */
   font-size: 24px;
   text-align: center;
   text-decoration: none;
