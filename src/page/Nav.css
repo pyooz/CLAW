@@ -10,9 +10,16 @@
   text-align: center;
 }
 
+.logo {
+  width: 100px;
+  height: 100px;
+  text-align: left;
+}
+
 .navbarMenu {
   color: white;
   margin: 8px;
-  font-size: 20px;
+  font-size: 24px;
+  text-align: center;
   text-decoration: none;
 }

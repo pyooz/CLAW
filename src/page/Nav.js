@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import './Nav.css';
+import Logo from '../logo.svg';
 
 function Nav() {
   return (
     <div className="navbar">
+      <Link to={'/'}>
+        <img className="logo" src={Logo} />
+      </Link>
       <Link className="navbarMenu" to={'/'}>홈</Link>
       <Link className="navbarMenu" to={'/LearningPage'}>학습하기</Link>
       {/* <Link className="navbarMenu" to={'/Game'}>게임하기</Link>
