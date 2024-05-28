@@ -6,8 +6,6 @@ function Home() {
 
   return (
     <div>
-      <button onClick={() => navigate("/LearningPage")}>학습</button>
-      <button onClick={() => navigate("/mypage")}>마이페이지</button>
     </div>
   );
 }

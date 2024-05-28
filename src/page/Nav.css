@@ -1,0 +1,18 @@
+/* Nav.css */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+/* https://github.com/orioncactus/pretendard */
+
+.navbar {
+  width: 100%;
+  background-color: cadetblue;
+  padding: 2% 0px;
+  text-align: center;
+}
+
+.navbarMenu {
+  color: white;
+  margin: 8px;
+  font-size: 20px;
+  text-decoration: none;
+}
