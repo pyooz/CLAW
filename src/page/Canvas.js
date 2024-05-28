@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function Canvas() {
   const [isDrawing, setIsDrawing] = useState(false);
@@ -6,7 +6,6 @@ function Canvas() {
   const [lastY, setLastY] = useState(0);
   const [path, setPath] = useState([]);
   const [paths, setPaths] = useState([]);
-  const [outputImageSrc, setOutputImageSrc] = useState(null); // 이미지 src 상태 추가
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -82,14 +81,13 @@ function Canvas() {
 
   useEffect(redrawCanvas, [paths]);
 
-  const analyzeInput = () => {
+  const saveImage = () => {
     const canvas = canvasRef.current;
-    const imageData = canvas.toDataURL();
-
-    setOutputImageSrc(imageData); // 이미지 데이터를 상태로 설정
-
-    const feedbackDiv = document.getElementById('feedback');
-    feedbackDiv.innerHTML = '분석 결과: 이미지로 표시됨';
+    const imageData = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.href = imageData;
+    link.download = 'canvas_image.png';
+    link.click();
   };
 
   const clearCanvas = () => {
@@ -111,11 +109,9 @@ function Canvas() {
         onMouseOut={handleMouseOut}
       />
       <br />
-      <button onClick={analyzeInput}>분석</button>
+      <button onClick={saveImage}>저장</button>
       <button onClick={clearCanvas}>다시 쓰기</button>
       <button onClick={undoStroke}>한 획만 지우기</button>
-      <div id="feedback"></div>
-      {outputImageSrc && <img src={outputImageSrc} alt="분석된 이미지" />} {/* 이미지 표시 */}
     </div>
   );
 }

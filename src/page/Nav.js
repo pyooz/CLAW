@@ -11,8 +11,8 @@ function Nav() {
       </Link>
       <Link className="navbarMenu" to={'/'}>홈</Link>
       <Link className="navbarMenu" to={'/LearningPage'}>학습하기</Link>
-      {/* <Link className="navbarMenu" to={'/Game'}>게임하기</Link>
-      <Link className="navbarMenu" to={'/myPage'}>마이페이지</Link> */}
+      {/* <Link className="navbarMenu" to={'/Game'}>게임하기</Link> */
+        <Link className="navbarMenu" to={'/myPage'}>마이페이지</Link>}
     </div>
   );
 }
