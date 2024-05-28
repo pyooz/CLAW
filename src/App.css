@@ -1,10 +1,10 @@
 .main {
-  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1920px;
+  width: 100%;
   box-sizing: border-box;
+  /* overflow: hidden; 스크롤바 감추기 */
 }
 
 .home {
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   padding: 35px 144px 233.5px 144px;
-  width: 1920px;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -146,6 +146,14 @@
   padding: 9px 15.2px 9px 15px;
   box-sizing: border-box;
 }
+
+
+.login a {
+  padding: 10px 20px; /* 로그인 링크의 패딩 설정 */
+  background-color: #555; /* 로그인 링크의 배경색 설정 */
+  color: #fff; /* 로그인 링크의 텍스트 색상 설정 */
+  text-decoration: none; /* 링크에 밑줄 제거 */
+} 
 
 .main-6 {
   overflow-wrap: break-word;
