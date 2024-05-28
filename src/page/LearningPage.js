@@ -80,8 +80,8 @@ const LearningPage = () => {
 
   return (
     <div className={styles.pageContainer}>
-      <h2>한글 깨우치기 - 학습하기</h2>
-      <div>
+      <h2>한글 깨우치기</h2>
+      <div className={styles.buttonContainer}>
         <button onClick={() => toggleLetterType('consonant')}>
           자음 학습하기
         </button>
@@ -95,7 +95,7 @@ const LearningPage = () => {
           쌍모음 학습하기
         </button>
       </div>
-      <div>
+      <div className={styles.buttonContainer}>
         {letterType === 'consonant' && (
           <>
             <h3>자음 학습하기</h3>
@@ -122,12 +122,13 @@ const LearningPage = () => {
         )}
         {selectedLetter && (
           <div>
-            <p>선택한 글자:</p>
+            <h3>선택한 글자:</h3>
             <p className={styles.selectedLetter}> {selectedLetter}</p>
           </div>
         )}
+        <br />
+        <Canvas />
       </div>
-      <Canvas />
     </div>
   );
 };

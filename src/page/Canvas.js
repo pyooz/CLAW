@@ -110,6 +110,7 @@ function Canvas() {
         onMouseUp={handleMouseUp}
         onMouseOut={handleMouseOut}
       />
+      <br />
       <button onClick={analyzeInput}>분석</button>
       <button onClick={clearCanvas}>다시 쓰기</button>
       <button onClick={undoStroke}>한 획만 지우기</button>
